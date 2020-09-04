@@ -2,33 +2,22 @@
 
 using namespace std;
 
-struct book
-{
-    string author;
-    string title;
-    int publicationYear;
-};
+main() {
 
-void setBook(book&);
+    char a = 100;
+    int b = 5212;
+    short c = 6123;
+    float d = 0.12345;
+    double f = 0.1234567890;
 
-int main()
-{
-    book book1, book2, book3;
-
-    setBook(book1);
-    setBook(book2);
-    setBook(book3);
-
-    return 0;
+    cout << a << endl;
+    cout << &a << endl;
+    cout << b << endl;
+    cout << &b << endl;
+    cout << c << endl;
+    cout << &c << endl;
+    cout << d << endl;
+    cout << &d << endl;
+    cout << f << endl;
+    cout << &f << endl;
 }
-
-void setBook(book &bookToSet)
-{
-    cout << "Who is the author of the book: ";
-    cin >> bookToSet.author;
-    cout << "What is the title of the book: ";
-    cin >> bookToSet.title;
-    cout << "In what year was the book published: ";
-    cin >> bookToSet.publicationYear;
-}
-

@@ -2,16 +2,12 @@
 
 using namespace std;
 
-struct book
-{
-    string title;
-    string author;
-    int publicationYear;
-};
+main() {
 
-int main()
-{
-    book book1, book2, book3;
+    char a;   //character 1 byte -128 to 127
+    int b;    //integer 4 bytes -2147483648 to 2147483647
+    short c;  //short integer 2 bytes -32768 to 3276
+    float d;  //floating point 4 bytes +/- 3.4e +/- 38 (~7 digits)
+    double f; //double floating point 8 bytes +/- 1.7e +/- 308 (~15 digits)
 
-    return 0;
 }
