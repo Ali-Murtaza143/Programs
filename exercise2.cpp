@@ -1,23 +1,39 @@
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-main() {
+main ()
+{
+    int chosenNumbersSum = 0;
+    char choice;
 
-    char a = 100;
-    int b = 5212;
-    short c = 6123;
-    float d = 0.12345;
-    double f = 0.1234567890;
+    for (int i = 1; ; i++)
+    {
 
-    cout << a << endl;
-    cout << &a << endl;
-    cout << b << endl;
-    cout << &b << endl;
-    cout << c << endl;
-    cout << &c << endl;
-    cout << d << endl;
-    cout << &d << endl;
-    cout << f << endl;
-    cout << &f << endl;
+        cout << "The current sum is: " << chosenNumbersSum << endl << endl;
+        cout << "Do you want to add " << i << " ?" << endl;
+
+        cout << "Y - yes / N - no / Anything else - end : ";
+        cin >> choice;
+
+        if (choice == 'Y' || choice == 'y')
+        {
+            chosenNumbersSum += i;
+        }
+        else if (choice == 'N' || choice == 'n')
+        {
+            system ("cls");
+            continue;
+        }
+        else
+        {
+            system ("cls");
+            break;
+        }
+        system ("cls");
+    }
+
+    cout << "Good bye !";
+
 }
