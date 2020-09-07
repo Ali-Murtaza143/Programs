@@ -4,22 +4,26 @@ using namespace std;
 
 main ()
 {
-    int numberOfPoints;
+    int minValue, maxValue, elementToCheck;
 
-    cout << "Enter the number of points you have achieved: ";
-    cin >> numberOfPoints;
+    cout << "Please input the minimum value: ";
+    cin >> minValue;
+    cout << "Please input the maximum value: ";
+    cin >> maxValue;
 
-    if ((numberOfPoints >= 0) && (numberOfPoints <= 100))
-    {
-        string outputMessage = (numberOfPoints > 50)
-            ? "You have passed the exam. Congratulations."
-            : "You didn't pass the exam.";
+    if (maxValue > minValue) {
 
-        cout << outputMessage;
+        cout << "Please input the number to check: ";
+        cin >> elementToCheck;
+
+        bool isContained = (minValue <= elementToCheck) && (elementToCheck <= maxValue);
+
+        if (isContained)
+            cout << "The number " << elementToCheck << " belongs to the interval from " << minValue << " to " << maxValue << " !" << endl;
+        else
+            cout << "The number " << elementToCheck << " doesn't belong to the interval from " << minValue << " to " << maxValue << " !" << endl;
     }
     else
-        cout << "ERROR. The number of points is invalid !";
-
-
+        cout << "Error. Maximum value cannot be lower than the minimum value.";
 
 }

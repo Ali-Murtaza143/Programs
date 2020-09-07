@@ -4,14 +4,19 @@ using namespace std;
 
 main ()
 {
-    int age;
-    cout << "Please input your age: ";
-    cin >> age;
+    int minValue, maxValue, elementToCheck;
 
-    string isAdult = (age >= 18)
-        ? "You are an adult please enter !"
-        : "You are not an adult !";
+    cout << "Please input the minimum value: ";
+    cin >> minValue;
+    cout << "Please input the maximum value: ";
+    cin >> maxValue;
+    cout << "Please input the number to check: ";
+    cin >> elementToCheck;
 
-    cout << isAdult;
+    bool isContained = (minValue <= elementToCheck) && (elementToCheck <= maxValue);
 
+    if (isContained)
+        cout << "The number " << elementToCheck << " belongs to the interval from " << minValue << " to " << maxValue << " !" << endl;
+    else
+        cout << "The number " << elementToCheck << " doesn't belong to the interval from " << minValue << " to " << maxValue << " !" << endl;
 }
