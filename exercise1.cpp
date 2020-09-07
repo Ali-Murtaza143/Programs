@@ -4,22 +4,14 @@ using namespace std;
 
 main ()
 {
-    int maximumNumber;
-    int sumEven = 0;
-    int temp;
+    int age;
+    cout << "Please input your age: ";
+    cin >> age;
 
-    cout << "Input maximum number you want to check: ";
-    cin >> maximumNumber;
+    string isAdult = (age >= 18)
+        ? "You are an adult please enter !"
+        : "You are not an adult !";
 
-    for (int i = 1; i <= maximumNumber; i++)
-    {
-        if (i % 2 == 1)
-            continue;
-
-        temp = sumEven;
-        sumEven += i;
-        cout << temp << " + " << i << " = " << sumEven << endl;
-
-    }
+    cout << isAdult;
 
 }

@@ -1,39 +1,25 @@
 #include <iostream>
-#include <cstdlib>
 
 using namespace std;
 
 main ()
 {
-    int chosenNumbersSum = 0;
-    char choice;
+    int numberOfPoints;
 
-    for (int i = 1; ; i++)
+    cout << "Enter the number of points you have achieved: ";
+    cin >> numberOfPoints;
+
+    if ((numberOfPoints >= 0) && (numberOfPoints <= 100))
     {
+        string outputMessage = (numberOfPoints > 50)
+            ? "You have passed the exam. Congratulations."
+            : "You didn't pass the exam.";
 
-        cout << "The current sum is: " << chosenNumbersSum << endl << endl;
-        cout << "Do you want to add " << i << " ?" << endl;
-
-        cout << "Y - yes / N - no / Anything else - end : ";
-        cin >> choice;
-
-        if (choice == 'Y' || choice == 'y')
-        {
-            chosenNumbersSum += i;
-        }
-        else if (choice == 'N' || choice == 'n')
-        {
-            system ("cls");
-            continue;
-        }
-        else
-        {
-            system ("cls");
-            break;
-        }
-        system ("cls");
+        cout << outputMessage;
     }
+    else
+        cout << "ERROR. The number of points is invalid !";
 
-    cout << "Good bye !";
+
 
 }
