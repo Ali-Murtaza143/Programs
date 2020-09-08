@@ -2,28 +2,30 @@
 
 using namespace std;
 
-main ()
+int main ()
 {
-    int minValue, maxValue, elementToCheck;
 
-    cout << "Please input the minimum value: ";
-    cin >> minValue;
-    cout << "Please input the maximum value: ";
-    cin >> maxValue;
+    int arraySize;
 
-    if (maxValue > minValue) {
+    cout << "Input the size of the dynamic array you want to create: ";
+    cin >> arraySize;
 
-        cout << "Please input the number to check: ";
-        cin >> elementToCheck;
+    int *dynamicArray = new int[arraySize];
 
-        bool isContained = (minValue <= elementToCheck) && (elementToCheck <= maxValue);
 
-        if (isContained)
-            cout << "The number " << elementToCheck << " belongs to the interval from " << minValue << " to " << maxValue << " !" << endl;
-        else
-            cout << "The number " << elementToCheck << " doesn't belong to the interval from " << minValue << " to " << maxValue << " !" << endl;
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << "Input " << i+1 << " number: ";
+        cin >> *(dynamicArray+i);
     }
-    else
-        cout << "Error. Maximum value cannot be lower than the minimum value.";
+
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << "Number " << i+1 << ": " << *(dynamicArray+i) << endl;
+    }
+
+    delete []dynamicArray;
+
 
 }
+

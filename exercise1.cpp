@@ -2,21 +2,22 @@
 
 using namespace std;
 
-main ()
+int main ()
 {
-    int minValue, maxValue, elementToCheck;
+    int statical;
 
-    cout << "Please input the minimum value: ";
-    cin >> minValue;
-    cout << "Please input the maximum value: ";
-    cin >> maxValue;
-    cout << "Please input the number to check: ";
-    cin >> elementToCheck;
+    int *statically = &statical;
+    int *dynamically = new int;
 
-    bool isContained = (minValue <= elementToCheck) && (elementToCheck <= maxValue);
+    *statically = 10;
+    *dynamically = 15;
 
-    if (isContained)
-        cout << "The number " << elementToCheck << " belongs to the interval from " << minValue << " to " << maxValue << " !" << endl;
-    else
-        cout << "The number " << elementToCheck << " doesn't belong to the interval from " << minValue << " to " << maxValue << " !" << endl;
+    cout << "The value of the statically allocated variable: " << *statically << ", and the address: " << statically << endl;
+    cout << "The value of the dynamically allocated variable: " << *dynamically << ", and the address: " << dynamically << endl;
+
+    delete dynamically;
+
+    return 0;
 }
+
+
