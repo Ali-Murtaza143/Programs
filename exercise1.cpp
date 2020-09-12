@@ -2,22 +2,23 @@
 
 using namespace std;
 
-int main ()
+void addition();
+
+main ()
 {
-    int statical;
-
-    int *statically = &statical;
-    int *dynamically = new int;
-
-    *statically = 10;
-    *dynamically = 15;
-
-    cout << "The value of the statically allocated variable: " << *statically << ", and the address: " << statically << endl;
-    cout << "The value of the dynamically allocated variable: " << *dynamically << ", and the address: " << dynamically << endl;
-
-    delete dynamically;
-
-    return 0;
+    addition();
 }
 
+void addition()
+{
+    double firstNumber, secondNumber, result;
 
+    cout << "Input the first number to add: ";
+    cin >> firstNumber;
+    cout << "Input the second number to add: ";
+    cin >> secondNumber;
+
+    result = firstNumber + secondNumber;
+    cout << firstNumber << " + " << secondNumber << " = " << result;
+
+}
