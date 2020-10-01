@@ -1,22 +1,34 @@
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
+void variableType(int);
+void variableType(double);
+void variableType(string);
+
 int main ()
 {
-    int arr[5];
-    int *pArr = arr;
+    int var1 = 2;
+    double var2 = 0.123;
+    string var3 = "What a beautiful day !";
 
-    for (int i = 0; i < 5; i++)
-    {
-        cout << "Input " << i+1 << " number: ";
-        cin >> *(pArr++);
-    }
-
-    for (int i = 0; i < 5; i++)
-    {
-        cout << "Number " << i+1 << ": " << arr[i] << endl;
-    }
+    variableType(var1);
+    variableType(var2);
+    variableType(var3);
 
     return 0;
+}
+
+void variableType(int var)
+{
+    cout << var << " - this variable was an integer !" << endl;
+}
+void variableType(double var)
+{
+    cout << var << " - this variable was a double !" << endl;
+}
+void variableType(string var)
+{
+    cout << var << " - this variable was a string !" << endl;
 }
