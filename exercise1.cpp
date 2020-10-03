@@ -2,22 +2,22 @@
 
 using namespace std;
 
+void setValue(int&);
+
 int main ()
 {
+    int a;
 
-    string name = "Cassandra";
-    string &cassie = name;
-    string &cassey = name;
-    string &sandra = name;
+    setValue(a);
 
-    cout << name << " " << &name << endl;
-    cout << cassie << " " << &cassie << endl;
-    cout << cassey << " " << &cassey << endl;
-    cout << sandra << " " << &sandra << endl;
-
-
-
+    cout << "Variable a is equal to: " << a;
 
     return 0;
+}
+
+void setValue(int &variableToSet)
+{
+    cout << "Input the value: ";
+    cin >> variableToSet;
 }
 
