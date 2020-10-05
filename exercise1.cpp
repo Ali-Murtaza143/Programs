@@ -2,22 +2,17 @@
 
 using namespace std;
 
-void setValue(int&);
-
-int main ()
+main()
 {
-    int a;
+    double lengthInches, lengthCentimeters;
 
-    setValue(a);
+    cout << "Length in inches: ";
+    cin >> lengthInches;
 
-    cout << "Variable a is equal to: " << a;
+    lengthCentimeters = lengthInches * 2.54;
 
-    return 0;
+    cout << lengthInches << " inches is equal to " << lengthCentimeters << " centimeters.";
+
 }
 
-void setValue(int &variableToSet)
-{
-    cout << "Input the value: ";
-    cin >> variableToSet;
-}
 
