@@ -1,28 +1,23 @@
 #include <iostream>
 
+
 using namespace std;
 
-void exponentiation();
-
-main ()
+main()
 {
-    exponentiation();
+    double firstElement, secondElement, multiplicationResult;
+
+    cout << "This is a simple multiplication program." << endl;
+    cout << "Input first number: ";
+    cin >> firstElement;
+    cout << "Input second number: ";
+    cin >> secondElement;
+
+    multiplicationResult = firstElement * secondElement;
+    cout << "First number: " << firstElement << endl;
+    cout << "Second number: " << secondElement << endl;
+    cout << "Multiplication result: " << multiplicationResult << endl;
+
 }
 
-void exponentiation()
-{
-    double base, exponent, result = 1;
 
-    cout << "Input the base to exponentiate: ";
-    cin >> base;
-    cout << "Input the exponent value: ";
-    cin >> exponent;
-
-    for (int i = 0; i < exponent; i++)
-    {
-        result *= base;
-    }
-
-    cout << "The number " << base << " to the power of " << exponent << " is equal to " << result << ".";
-
-}
