@@ -1,21 +1,39 @@
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-main()
+main ()
 {
-    double temperatureCelsius, temperatureFahrenheit, temperatureKelvin;
+    int chosenNumbersSum = 0;
+    char choice;
 
-    cout << "Please input the temperature in Celsius: ";
-    cin >> temperatureCelsius;
+    for (int i = 1; ; i++)
+    {
 
-    temperatureFahrenheit = (temperatureCelsius * 9/5) + 32;
-    temperatureKelvin = temperatureCelsius + 273.15;
+        cout << "The current sum is: " << chosenNumbersSum << endl << endl;
+        cout << "Do you want to add " << i << " ?" << endl;
 
-    cout << "The inputted temperature in Celsius: " << temperatureCelsius << endl;
-    cout << "Converted to Fahrenheit: " << temperatureFahrenheit << endl;
-    cout << "Converted to Kelvin: " << temperatureKelvin << endl;
+        cout << "Y - yes / N - no / Anything else - end : ";
+        cin >> choice;
+
+        if (choice == 'Y' || choice == 'y')
+        {
+            chosenNumbersSum += i;
+        }
+        else if (choice == 'N' || choice == 'n')
+        {
+            system ("cls");
+            continue;
+        }
+        else
+        {
+            system ("cls");
+            break;
+        }
+        system ("cls");
+    }
+
+    cout << "Good bye !";
 
 }
-
-

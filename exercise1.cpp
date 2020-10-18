@@ -2,17 +2,24 @@
 
 using namespace std;
 
-main()
+main ()
 {
-    double lengthInches, lengthCentimeters;
+    int maximumNumber;
+    int sumEven = 0;
+    int temp;
 
-    cout << "Length in inches: ";
-    cin >> lengthInches;
+    cout << "Input maximum number you want to check: ";
+    cin >> maximumNumber;
 
-    lengthCentimeters = lengthInches * 2.54;
+    for (int i = 1; i <= maximumNumber; i++)
+    {
+        if (i % 2 == 1)
+            continue;
 
-    cout << lengthInches << " inches is equal to " << lengthCentimeters << " centimeters.";
+        temp = sumEven;
+        sumEven += i;
+        cout << temp << " + " << i << " = " << sumEven << endl;
+
+    }
 
 }
-
-
